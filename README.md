@@ -10,7 +10,7 @@
 
 * Java
 * Eclipse
+* Static
 * Google
 
 ## Lessons Learned
-# FoodTruckProject
