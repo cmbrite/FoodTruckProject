@@ -4,25 +4,55 @@ public class FoodTruck {
 	private int nextTruckId;
 	private String truckName;
 	private String foodType;
-	private int truckRating;
+	private double truckRating;
 
-	public void input(String name, String foodType, int truckRating) {
-		
-		for (int i = 0; i < 5; i++) {
-			
-		System.out.println("Please enter the food truck name: ");
-		this.truckName = name;
-		if(!name.equalsIgnoreCase("quit")) {
-		System.out.println("Please enter the food type: ");
+//	The user is prompted to input the name, food type, and rating for up to five food trucks.
+	
+	public FoodTruck(int nextTruckId, String truckName, String foodType, double truckRating) {
+		this.nextTruckId = nextTruckId;	
+		this.truckName = truckName;
 		this.foodType = foodType;
-		System.out.println("Please rate the food truck: ");
 		this.truckRating = truckRating;
-			}
-			}
+		}
+//	if(!name.equalsIgnoreCase("quit")) {
+//		for (int i = 0; i < 5; i++) {
+//		System.out.println("Please enter the food truck name: ");
+//		System.out.println("Please enter the food type: ");
+//		System.out.println("Please rate the food truck: ");
+//			}
+
+	public int getNextTruckId() {
+		return nextTruckId;
 	}
 
-	public FoodTruck(int nextTruckId) {
-		super();
+	public void setNextTruckId(int nextTruckId) {
 		this.nextTruckId = nextTruckId;
 	}
-}
+
+	public String getTruckName() {
+		return truckName;
+	}
+
+	public void setTruckName(String truckName) {
+		this.truckName = truckName;
+	}
+
+	public String getFoodType() {
+		return foodType;
+	}
+
+	public void setFoodType(String foodType) {
+		this.foodType = foodType;
+	}
+
+	public double getTruckRating() {
+		return truckRating;
+	}
+
+	public void setTruckRating(double truckRating) {
+		this.truckRating = truckRating;
+	}
+	
+	}
+
+
