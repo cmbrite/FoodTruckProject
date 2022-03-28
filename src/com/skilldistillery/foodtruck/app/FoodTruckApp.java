@@ -1,13 +1,30 @@
 package com.skilldistillery.foodtruck.app;
 
+import java.util.Scanner;
+
 import com.skilldistillery.foodtruck.entities.FoodTruck;
 
 public class FoodTruckApp {
 
-	public static void main(String[] args) {
+	private int numTrucks; // Total number of trucks
+	private FoodTruck[] trucks; // Array of created food trucks
+	private final int MAX_TRUCKS = 5; // Max number of trucks
 
-		String truckArr[] = { "truck1", "truck2", "truck3", "truck4", "truck5" };
-
+	public FoodTruckApp() {
+		trucks = new FoodTruck[MAX_TRUCKS];
 	}
-	public void input(){}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+//		TODO figure out how to make program quit
+//		if(!name.equalsIgnoreCase("quit")) {
+//			for (int i = 0; i < 5; i++) {
+//			System.out.println("Please enter the food truck name: ");
+//			System.out.println("Please enter the food type: ");
+//			System.out.println("Please rate the food truck: ");
+//				}
+	}
+
+	public void input() {
+	}
 }

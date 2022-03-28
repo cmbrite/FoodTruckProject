@@ -7,20 +7,16 @@ public class FoodTruck {
 	private double truckRating;
 
 //	The user is prompted to input the name, food type, and rating for up to five food trucks.
-	
+
+	public FoodTruck() {
+	}
+
 	public FoodTruck(int nextTruckId, String truckName, String foodType, double truckRating) {
-		this.nextTruckId = nextTruckId;	
+		this.nextTruckId = nextTruckId;
 		this.truckName = truckName;
 		this.foodType = foodType;
 		this.truckRating = truckRating;
-		}
-//	TODO figure out how to make program quit
-//	if(!name.equalsIgnoreCase("quit")) {
-//		for (int i = 0; i < 5; i++) {
-//		System.out.println("Please enter the food truck name: ");
-//		System.out.println("Please enter the food type: ");
-//		System.out.println("Please rate the food truck: ");
-//			}
+	}
 
 //	Generated getters and setters
 	public int getNextTruckId() {
@@ -58,10 +54,23 @@ public class FoodTruck {
 //	Generated toString and removed nextTruckId
 	@Override
 	public String toString() {
-		return "FoodTruck [Truck Name=" + truckName + ", Food Type=" + foodType
-				+ ", Rating=" + truckRating + "]";
-	}
-	
+		return "FoodTruck [Truck Name=" + truckName + ", Food Type=" + foodType + ", Rating=" + truckRating + "]";
 	}
 
+	//TODO List all existing food trucks
+	public void displayTrucks() {
 
+		System.out.println();
+	}
+//TODO Average out the food trucks
+	public void averageTruckRating() {
+
+		System.out.println();
+	}
+//TODO Display truck with best average
+	public void bestTruck() {
+
+		System.out.println();
+	}
+
+}
