@@ -14,6 +14,7 @@ public class FoodTruck {
 		this.foodType = foodType;
 		this.truckRating = truckRating;
 		}
+//	TODO figure out how to make program quit
 //	if(!name.equalsIgnoreCase("quit")) {
 //		for (int i = 0; i < 5; i++) {
 //		System.out.println("Please enter the food truck name: ");
@@ -21,6 +22,7 @@ public class FoodTruck {
 //		System.out.println("Please rate the food truck: ");
 //			}
 
+//	Generated getters and setters
 	public int getNextTruckId() {
 		return nextTruckId;
 	}
@@ -51,6 +53,13 @@ public class FoodTruck {
 
 	public void setTruckRating(double truckRating) {
 		this.truckRating = truckRating;
+	}
+
+//	Generated toString and removed nextTruckId
+	@Override
+	public String toString() {
+		return "FoodTruck [Truck Name=" + truckName + ", Food Type=" + foodType
+				+ ", Rating=" + truckRating + "]";
 	}
 	
 	}
