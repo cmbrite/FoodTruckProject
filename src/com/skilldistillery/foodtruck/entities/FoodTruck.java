@@ -51,22 +51,25 @@ public class FoodTruck {
 		this.truckRating = truckRating;
 	}
 
-//	Generated toString and removed nextTruckId
+//	Generated toString
 	@Override
 	public String toString() {
-		return "FoodTruck [Truck Name=" + truckName + ", Food Type=" + foodType + ", Rating=" + truckRating + "]";
+		return "FoodTruck [nextTruckId=" + nextTruckId + ", truckName=" + truckName + ", foodType=" + foodType
+				+ ", truckRating=" + truckRating + "]";
 	}
 
-	//TODO List all existing food trucks
+	// TODO List all existing food trucks
 	public void displayTrucks() {
 
 		System.out.println();
 	}
+
 //TODO Average out the food trucks
 	public void averageTruckRating() {
 
 		System.out.println();
 	}
+
 //TODO Display truck with best average
 	public void bestTruck() {
 
