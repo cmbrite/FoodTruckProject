@@ -5,55 +5,65 @@ import java.util.Scanner;
 import com.skilldistillery.foodtruck.entities.FoodTruck;
 
 public class FoodTruckApp {
+
 	public static void main(String[] args) {
-	}
-
-	private int numTrucks; // Total number of trucks
-	private FoodTruck[] trucks; // Array of created food trucks
-	private final int MAX_TRUCKS = 5; // Max number of trucks
-
-	public FoodTruckApp() {
-		trucks = new FoodTruck[MAX_TRUCKS];
-	}
-
-	public void addTruck(FoodTruck t) {
-		trucks[numTrucks] = t;
-		numTrucks++; // increment the number of trucks up to MAX_Trucks
-	}
-
-	public FoodTruck[] getTrucks() {
-		FoodTruck[] truckCopy = new FoodTruck[trucks.length];
-		for (int i = 0; i < trucks.length; i++) {
-			truckCopy[i] = trucks[i];
-		}
-		return truckCopy;
-	}
-	//TODO Make menu method?
-//		System.out.println("Please select a number for the corresponding menu choice.");
-//		System.out.println("1. List all existing food trucks.");
-//		System.out.println("2. See the average rating of food trucks.");
-//		System.out.println("3. Display the highest-rated food truck.");
-//		System.out.println("4. Quit the program.");
-//		
-	public void runApp() {
 		Scanner sc = new Scanner(System.in);
 
+		FoodTruck[] trucks = new FoodTruck[5];
+		trucks[0] = new FoodTruck();
+		trucks[1] = new FoodTruck();
+		trucks[2] = new FoodTruck();
+		trucks[3] = new FoodTruck();
+		trucks[4] = new FoodTruck();
+
 		for (int i = 0; i < 5; i++) {
-			int truckId = i + 1;
-
-//		TODO figure out how to make program quit
-
 			System.out.println("Please enter the food truck name: ");
 			String truckName = sc.nextLine();
-
-			if (!truckName.equalsIgnoreCase("quit")) {
+			int nextTruckId = 0;
+			nextTruckId = i + 1;
+			if (truckName.equalsIgnoreCase("quit")) {
 				break;
 			}
-				System.out.println("Please enter the food type: ");
-				String foodType = sc.nextLine();
+			System.out.println("Please enter the food type: ");
+			String foodType = sc.nextLine();
 
-				System.out.println("Please rate the food truck: ");
-				double truckRating = sc.nextDouble();
+			System.out.println("Please rate the food truck: ");
+			double truckRating = sc.nextDouble();
+			sc.nextLine();
+
+			FoodTruck copyTrucks = new FoodTruck(nextTruckId, truckName, foodType, truckRating);
+			trucks[i] = copyTrucks;
+			System.out.println(copyTrucks);
+			System.out.println();
+		}
+
+		System.out.println("Please select a number for the corresponding menu choice.");
+		System.out.println("1. List all existing food trucks.");
+		System.out.println("2. See the average rating of food trucks.");
+		System.out.println("3. Display the highest-rated food truck.");
+		System.out.println("4. Quit the program.");
+		int choice = sc.nextInt();
+
+		for (int i = 0; i < trucks.length; i++) {
+			if (choice == 1) {
+				System.out.println(trucks.toString());
+			} else {
+				System.out.println("Invalid menu choice");
+				break;
+			}
+			
+//		else if(choice == 2) {
+//		double average = truckRating / numTrucks;
+//		System.out.print(average);
+//		}
+//		else if(choice == 3) {
+//		System.out.print(bestTruck);
+//		}
+//			else if(choice == 3) {
+//				System.out.print(bestTruck);
+//				}
+
+			sc.close();
 		}
 	}
 }

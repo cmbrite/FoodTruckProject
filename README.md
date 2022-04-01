@@ -12,6 +12,7 @@ This project is supposed to prompt the user for Food Truck information and input
 * Eclipse
 * Static
 * Google
+*Class Lessons
 
 ## Lessons Learned
 I relied heavily on the car/parking lot example used in class along with reviewing class lessons.  I am currently still struggling to get from the point of user input to the array with varying length.  

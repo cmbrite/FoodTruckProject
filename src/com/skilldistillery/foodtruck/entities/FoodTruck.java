@@ -1,17 +1,18 @@
 package com.skilldistillery.foodtruck.entities;
 
 public class FoodTruck {
+	//Food Truck Fields
 	private int nextTruckId;
 	private String truckName;
 	private String foodType;
 	private double truckRating;
 
-//	The user is prompted to input the name, food type, and rating for up to five food trucks.
-
+	//No args Constructor
 	public FoodTruck() {
 	}
-
+	//Constructor
 	public FoodTruck(int nextTruckId, String truckName, String foodType, double truckRating) {
+		super();
 		this.nextTruckId = nextTruckId;
 		this.truckName = truckName;
 		this.foodType = foodType;
@@ -54,26 +55,9 @@ public class FoodTruck {
 //	Generated toString
 	@Override
 	public String toString() {
-		return "FoodTruck [nextTruckId=" + nextTruckId + ", truckName=" + truckName + ", foodType=" + foodType
-				+ ", truckRating=" + truckRating + "]";
+		return "FoodTruck Truck ID: " + nextTruckId + ", Truck Name: " + truckName + ", Food Type: " + foodType
+				+ ", Rating: " + truckRating;
 	}
 
-	// TODO List all existing food trucks
-	public void displayTrucks() {
-
-		System.out.println();
-	}
-
-//TODO Average out the food trucks
-	public void averageTruckRating() {
-
-		System.out.println();
-	}
-
-//TODO Display truck with best average
-	public void bestTruck() {
-
-		System.out.println();
-	}
 
 }
