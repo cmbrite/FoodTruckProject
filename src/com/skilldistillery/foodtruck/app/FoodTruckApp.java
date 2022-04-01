@@ -33,7 +33,8 @@ public class FoodTruckApp {
 			while (truckRating > 10 || truckRating < 1) {
 				System.out.println("Invalid rating. Please select a number between 1-10");
 				truckRating = sc.nextInt();
-				continue;
+//				continue;
+				sc.nextLine();
 			}
 			trucks[i] = new FoodTruck(nextTruckId, truckName, foodType, truckRating);
 
@@ -52,18 +53,19 @@ public class FoodTruckApp {
 			continue;
 		}
 		if (choice == 1) {
+			//Menu1 method prints all create Food Trucks
 			menu1();
-			// TODO menu2 doesn't work
+			
+			// Menu2 prints average of all created Food Trucks
+		} else if (choice == 2) {
+			menu2();
 		}
-//		else if (choice == 2) {
-//			menu2();
 		// TODO menu3 doesn't work
 //		else if(choice == 3) {
 //		System.out.print(bestTruck);
 //		}
 		else if (choice == 4) {
 			System.out.print("GoodBye");
-//			break;
 		}
 		// Close scanner
 		sc.close();
@@ -87,30 +89,18 @@ public class FoodTruckApp {
 			}
 		}
 	}
-
-//	public void menu2(FoodTruck [] trucks) {
-//		double average;
-//		for (int i = 0; i < trucks.length; i++) {
-//			if (trucks[i] != null) {
-//				break;
-//			}
-//			System.out.println(trucks[i].getTruckRating());
-//			double truckRating = trucks[i].getTruckRating();
-//			average = truckRating / (i + 1);
-////			System.out.println(average);
-//		}
-//	}
-	public double menu2(FoodTruck [] trucks, int num) {
-		double total = 0;
-		for(int i = 0; i < trucks.length; i++ ) {
+	public void menu2() {
+		double totalRating = 0;
+		int num = 0;
+		for (int i = 0; i < trucks.length; i++) {
 			if (trucks[i] == null) {
 				break;
 			}
-			total += trucks[i].getTruckRating();
-			num = i;
+			totalRating += trucks[i].getTruckRating();
+			num = (i + 1);
 		}
-		double averageRating = (Math.round(total/num)*10.0)/10.0;
-		return averageRating;
+		double averageRating = totalRating / num;
+		System.out.println(averageRating);
 	}
 
 }
