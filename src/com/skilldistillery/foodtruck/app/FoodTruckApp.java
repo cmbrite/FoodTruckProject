@@ -61,9 +61,9 @@ public class FoodTruckApp {
 			menu2();
 		}
 		// TODO menu3 doesn't work
-//		else if(choice == 3) {
-//		System.out.print(bestTruck);
-//		}
+		else if(choice == 3) {
+		menu3();
+		}
 		else if (choice == 4) {
 			System.out.print("GoodBye");
 		}
@@ -100,7 +100,19 @@ public class FoodTruckApp {
 			num = (i + 1);
 		}
 		double averageRating = totalRating / num;
-		System.out.println(averageRating);
+		System.out.println("The average rating of your " + num + " food trucks is " + averageRating);
+	}
+
+	public void menu3() {
+		FoodTruck highestRated = trucks[0];
+		for(int i = 0; i < trucks.length; i++) {
+			if(trucks[i] == null) {
+				continue;
+			}
+			if(trucks[i].getTruckRating() > highestRated.getTruckRating()) {
+				highestRated = trucks[i];
+			}
+		}System.out.println("The hightest rated food truck is " + highestRated);
 	}
 
 }

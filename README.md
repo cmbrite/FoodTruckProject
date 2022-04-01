@@ -15,4 +15,4 @@ This project is supposed to prompt the user for Food Truck information and input
 *Class Lessons
 
 ## Lessons Learned
-I relied heavily on the car/parking lot example used in class along with reviewing class lessons.  I am currently still struggling to get from the point of user input to the array with varying length.  
+I relied heavily on the car/parking lot example used in class along with reviewing class lessons.  I struggled to get from the point of user input to the array with varying length. I referenced knowledge web sites and user submitted how to's which helped me to come up with the correct formulas for the truck average rating and highest rated trucks.  Rereading the class lessons and practicing the material we had gone over this week also helped me.  The biggest lesson I learned is that I need to get better asking questions for clarity instead of trying to go it alone.  My cohort peers have also been aided me in solving problems by asking questions.
